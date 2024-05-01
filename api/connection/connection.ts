@@ -2,7 +2,7 @@ import mongoose, { Schema } from "mongoose";
 
 export const connect = () => {
   try {
-    return mongoose.connect(`mongodb://localhost:27017/mock-database`);
+    return mongoose.connect(`mongodb://mongodb:27017/mock-database`);
   } catch (error) {
     throw error;
   }

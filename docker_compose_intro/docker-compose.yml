@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   mongodb:
@@ -11,13 +11,15 @@ services:
       - ./init-mongodb/data:/tmp/data
     networks:
       - node-network
-      
+
   node-app:
-    build: .
-    image: node-app
-    container_name: node-app
+    build: ../api
+    image: express-server
+    container_name: express-server
+    links:
+      - mongodb
     ports:
-      - '8080:8080'
+      - "8000:8000"
     depends_on:
       - mongodb
     networks:

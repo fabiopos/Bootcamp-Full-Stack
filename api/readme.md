@@ -1,5 +1,14 @@
 # API
 
+## Getting Started
+
+### Docker
+
+1. Open a terminal and go to: `./docker-compose-intro`
+2. Run the command: `docker-compose up`
+3. Run a HTTP request to `http://localhost:8000/users`
+
+If you see several records as output of the request your application is runnung successfuly.
 
 ## Routes
 
